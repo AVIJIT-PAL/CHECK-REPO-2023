@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nonCrewedMissionBtn = document.getElementById('non-crewed-mission-btn');
 
     // Replace 'YOUR_IMAGE_URL' with the actual URL of your image on Google Drive
-    const imageUrl = 'https://drive.google.com/uc?id=YOUR_IMAGE_ID';
+    const imageUrl = 'https://drive.google.com/uc?id=11JLdgHhekYPit1Vswco9rKJ4T_s5AG0J';
 
     // Set the source of the image tag
     const imageContainer = document.getElementById('image-container');
