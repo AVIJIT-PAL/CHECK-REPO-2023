@@ -13,9 +13,9 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('3d-container').appendChild(renderer.domElement);
 
-// Load the glTF model
+// Load the glb model from Google Drive
 const loader = new THREE.GLTFLoader();
-loader.load('https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbUFRIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fd64378668341f92ea3095036895f2b8c5b15c81/TitanSurface_1_5150.glb?disposition=inline', (gltf) => {
+loader.load('https://drive.google.com/uc?id=1ZRJbvwI8VKWmH7M2KJQt0nRiyVrTOM17', (gltf) => {
     // Adjust the position or scale if needed
     gltf.scene.rotation.x = Math.PI / 4; // Example: Rotate the model for a better view
     scene.add(gltf.scene);
