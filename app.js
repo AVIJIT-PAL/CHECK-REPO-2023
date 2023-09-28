@@ -1,5 +1,5 @@
 // Import Three.js
-// import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js';
+import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js';
 
 // Create a scene
 const scene = new THREE.Scene();
@@ -15,7 +15,7 @@ document.getElementById('3d-container').appendChild(renderer.domElement);
 
 // Load the glb model from GitHub Pages
 const loader = new THREE.GLTFLoader();
-loader.load('/path/to/your/model.gltf', (gltf) => {
+loader.load('http://drive.google.com/uc?export=view&id=1ZRJbvwI8VKWmH7M2KJQt0nRiyVrTOM17', (gltf) => {
     // Adjust the position or scale if needed
     gltf.scene.rotation.x = Math.PI / 4; // Example: Rotate the model for a better view
     scene.add(gltf.scene);
