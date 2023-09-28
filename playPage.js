@@ -1,26 +1,21 @@
 // playPage.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    const imageUploadInput = document.getElementById('image-upload');
     const knowledgeCardBtn = document.getElementById('knowledge-card-btn');
     const crewedMissionBtn = document.getElementById('crewed-mission-btn');
     const nonCrewedMissionBtn = document.getElementById('non-crewed-mission-btn');
 
-    // Event listener for the image upload
-    imageUploadInput.addEventListener('change', handleImageUpload);
+    // Replace 'YOUR_IMAGE_URL' with the actual URL of your image on Google Drive
+    const imageUrl = 'https://drive.google.com/uc?id=YOUR_IMAGE_ID';
+
+    // Set the source of the image tag
+    const imageContainer = document.getElementById('image-container');
+    imageContainer.innerHTML = `<img src="${imageUrl}" alt="Mission Image">`;
 
     // Event listeners for mission buttons
     knowledgeCardBtn.addEventListener('click', () => goToMission('Knowledge Card'));
     crewedMissionBtn.addEventListener('click', () => goToMission('Crewed Mission'));
     nonCrewedMissionBtn.addEventListener('click', () => goToMission('Non Crewed Mission'));
-
-    function handleImageUpload(event) {
-        const file = event.target.files[0];
-
-        // You can perform actions with the uploaded image, e.g., display it on the page
-        // For simplicity, let's log the file name to the console
-        console.log('Uploaded image:', file.name);
-    }
 
     function goToMission(missionType) {
         // Perform actions based on the selected mission type
